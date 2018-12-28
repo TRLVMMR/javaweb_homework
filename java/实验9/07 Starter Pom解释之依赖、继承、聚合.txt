@@ -1,0 +1,58 @@
+1.依赖关系：在工程之中需要依赖各种各样的jar包，也可能需要依赖其他的maven工程打包好的包。这个时候就需要使用依赖关系对pom.xml来进行配置。
+依赖多个项目，这些项目中有相同jar包，但版本不同，那选择哪个呢？如何解决？
+根据传递性依赖的原则：路径最近者优先路径相同，第一声明者优先。(相互继承，子工程会选择最近的一个父工程的jar包进行继承)
+2.继承关系：懂得一点儿java的，都知道继承是什么，就是为了将公共的东西拿出来直接用。
+
+
+
+
+继承为了消除重复，我们把很多相同的配置提取出来（比如在maven相互依赖的项目中，不同的项目中却有相同的jar包配置，那样不是显得非常多而且繁琐，每次都需要去配置它，很麻烦）
+
+
+
+
+所以，maven提供了一个父类maven项目(新建工程Parent，目的消除子工程的配置文件中重复的内容，所以无需代码类，删除代码)来装所有公共使用的jar，只要继承都可以使用。
+
+
+但是需要做点儿配置步骤：
+
+假设子工程都需要用到了相同的junit版本4.9
+
+
+(1)在父类工程的pom.xml中配置依赖的jar包
+
+
+(2)在各个子工程中引入父工程即可<parent>，放在<denpendencies>上面，同时在所有子项目中Hello、HelloFriend、MakeFridens中删除重复的<groupId>、<version>、<dependency>
+
+
+这个时候就不需要子工程的pom.xml文件配置公共的jar包了。
+<parent>
+   <groupId>cn.itcast.maven</groupId>
+   <artifactId>Parent</artifactId>
+   <version>0.0.1-SNAPSHOT</version>
+   <relativePath>../Parent/pom.xml</relativePath>
+</parent>
+(3)修改父工程中的pom.xml
+<packaging>jar</packaging> 改为 <packaging>pom</packaging> 
+这是一个父工程，实际是一个聚合工程，它没有实际代码，它的作用是抽象出子工程公用的内容
+
+3.聚合关系：在java中我们也可以知道，就是在完成某一个模块的时候，它需要几个模块的公共工作才能完成(不是组合关系)。
+在上面的继承关系中，我们从父工程依次执行mvn install命令，那么它就没问题，因为依次都打包到本地仓库中去了，子工程要依赖父工程的包，自然也就没问题，但是当我们反过来做就会出问题。解决这个问题依次这样执行，就会变得很繁琐，这个时候我们的maven的聚合出现了，它就是为此问题而存在。
+
+
+
+
+如果我们想一次构建多个项目模块，那我们就需要对多个项目模块进行聚合，这样做，我们只需要对父工程进行mvn install命令，它就会依次把继承依赖的所有工程都自动执行mvn clean test compile package install命令了。怎么样很方便吧！这就是mvn的强大之处。
+
+
+
+
+它也需要做点儿pom.xml配置：只需要在父工程中配置
+  <modules>
+	<module>../Hello</module>
+	<module>../HelloFriend</module>
+	<module>../MakeFriends</module>
+	<module>../HelloWeb</module>
+  </modules>
+这样就无需一个一个的安装 mvn install，只需要父工程的 pom.xml 上 Run As，就会连同全部一起进行安装。
+<modules><module>…</module></modules>

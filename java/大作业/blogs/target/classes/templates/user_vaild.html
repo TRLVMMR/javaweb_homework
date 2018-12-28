@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博客</title>
+</head>
+
+<body>
+	<h2><a href="http://localhost:8080/index">主页</a></h2>
+	   <script type="text/javascript">
+        onload=function(){
+            setInterval(go, 1000);
+        };
+        var x=3; //利用了全局变量来执行
+        function go(){
+        x--;
+            if(x > 0){
+            document.getElementById("sp").innerHTML="还有" + x + "秒后跳转到主页";
+            }else{
+            location.href='http://localhost:8080/index';
+            }
+        }
+    </script>
+    <h1 style="text-align:center">您不是作者</h1>
+     <h2 id="sp" style="text-align:center"></h2>
+</body>
+</html>

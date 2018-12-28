@@ -1,0 +1,24 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+      <link rel="stylesheet" type="text/css" href="login.css"/>
+    <head>  
+        <title>写文章</title>  
+    </head>  
+    <body>
+    <h2><a href="http://localhost:8080/index">主页</a></h2>
+    <form method='post'>
+          <h2 class="text-center">写文章</h2>
+         <div class="form-group">
+          标题<br>
+      <input type="text" name='title' value="${title}" id ="nickname" size="60">
+      </div>
+      <div class="form-group">
+    正文<br>
+      <textarea name="content" cols="61" rows="6">${content}</textarea>
+      </div>
+         <button type="submit" class="btn btn-primary pull-right">确认</button>
+  </form>      
+        
+    </body>  
+</html>

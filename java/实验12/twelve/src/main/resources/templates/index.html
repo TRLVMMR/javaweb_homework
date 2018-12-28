@@ -1,0 +1,17 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+    <head>  
+        <title>欢迎!</title>  
+    </head>  
+    <body>
+      <h2><a href="http://localhost:8080/login"> 登录</a> | <a href="http://localhost:8080/register">注册</a>
+      |  <a href="http://localhost:8080/logout">注销</a></h2>
+	<#if user??>
+		<h1>欢迎登录, ${user.getUserName()}</h1>
+		<p><a href="http://localhost:8080/profile">我的账户</a></p>
+     <#else>
+     	<h2>您还没有登录，请前往登录</h1>
+     </#if>
+    </body>  
+</html>

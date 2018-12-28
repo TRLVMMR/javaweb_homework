@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+<head>
+    <title></title>
+</head>
+<body class="hp vasq" id="gsr" style="">
+<!-- 表格每行样式改为独立  -->
+  <table style="border-collapse:collapse;">
+  <!-- 描述 -->
+  <caption>非胰岛素治疗患者的交替自我血糖监测方案</caption>
+ <tbody>
+ 	<!-- 用粗线加入上下边框CSS样式 -->
+    <tr style="border-bottom-style: solid;border-top-style: solid">
+        <td>时间</td>
+        <td>空腹</td>
+        <td>早餐后</td>
+        <td>午餐前</td>
+        <td>午餐后</td>
+        <td>晚餐前</td>
+        <td>晚餐后</td>
+    </tr>
+ <tr>
+    <th>周一</th>
+    <#list Monday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+ <tr>
+    <th>周二</th>
+    <#list Tuesday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+    
+</tr>
+ <tr>
+    <th>周三</th>
+    <#list Wednesday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+ <tr>
+    <th>周四</th>
+    <#list Thursday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+ <tr>
+    <th>周五</th>
+    <#list Friday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+ <tr>
+    <th>周六</th>
+    <#list Saturday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+ <tr style="border-bottom-style: solid">
+    <th>周日</th>
+     <#list Sunday as item>
+    	<td>
+    	<#if item == 0>
+    		x
+    	<#else>
+    		&nbsp;
+    	</#if>
+    	</td>
+    </#list>
+</tr>
+   </tbody></table>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+SpringBoot提供了简化企业级开发绝大多数场景的Starter POM如下：
+
+spring-boot-starter：SpringBoot核心starter，包含自动配置、日志、yaml配置文件的支持
+spring-boot-starter-actuator：用于使用Spring Boot的Actuator，它提供了production ready功能来帮助你监控和管理应用程序
+spring-boot-starter-activemq：用于使用Apache ActiveMQ实现JMS消息
+spring-boot-starter-amqp：用于使用Spring AMQP和Rabbit MQ
+spring-boot-starter-aop：使用Spring-AOP和AspectJ支持面向切面编程
+spring-boot-starter-artemis：使用Apache Artemis实现JMS消息
+spring-boot-starter-batch：对Spring Batch的支持
+spring-boot-starter-cache：用于使用Spring框架的缓存支持
+spring-boot-starter-cloud-connectors：对云平台（Cloud Foundry、Heroku）提供的服务提供简化的连接方式
+spring-boot-starter-data-cassandra：用于使用分布式数据库 - Cassandra和Spring Data Cassandra
+spring-boot-starter-data-couchbase：用于使用基于文档的数据库Couchbase和Spring Data Couchbase
+spring-boot-starter-data-elasticsearch：通过Spring Data Elasticsearch提供对Elasticsearch的支持
+spring-boot-starter-data-jpa：对JPA的支持，包含Spring-data-jpa、Spring-orm和Hibernate
+spring-boot-starter-data-ldap：
+spring-boot-starter-data-mongodb：用于使用基于文档的数据库MongoDB和Spring Data MongoDB
+spring-boot-starter-data-neo4j：用于使用图数据库Neo4j和Spring Data Neo4j
+spring-boot-starter-data-redis：通过Spring-data-redis提供对Redis的支持
+spring-boot-starter-data-rest：通过Spring-data-rest-webmvc将Spring Data repository暴露为REST形式的服务
+spring-boot-starter-data-solr：通过Spring-data-solr提供对Apache Solr的支持
+spring-boot-starter-freemarker：对freemarker模板引擎的支持
+spring-boot-starter-groovy-templates：对groovy模板引擎的支持
+spring-boot-starter-hateoas：用于使用Spring MVC和Spring HATEOAS实现基于超媒体的RESTful web应用
+spring-boot-starter-integration：对系统集成框架Spinrg-integration的支持
+spring-boot-starter-jdbc：对JDBC数据库的支持
+spring-boot-starter-jersey：用于使用JAX-RS和Jersey构建RESTful web应用，可使用spring-boot-starter-web替代
+spring-boot-starter-jooq：用于使用JOOQ访问SQL数据库，可使用springboot-starter-data-jpa或spring-boot-starter-jdbc替代
+spring-boot-starter-jta-atomikos：通过atomikos对分布式事务的支持
+spring-boot-starter-jta-bitronix：通过bitronix对分布式事务的支持
+spring-boot-starter-jta-narayana：Spring Boot Narayana JTA Starter
+spring-boot-starter-log4j2：支持使用Log4J日志框架
+spring-boot-starter-logging：用于使用Logback记录日志，默认的日志starter
+spring-boot-starter-mail：用于使用Java Mail和Spring框架email发送支持
+spring-boot-starter-mobile：对Spring mobile的支持
+spring-boot-starter-mustache：对mustache模板引擎的支持
+spring-boot-starter-security：对Spring sercurity的支持
+spring-boot-starter-social-facebook：通过Spring-social-facebook提供对Facebook的支持
+spring-boot-starter-social-linkin：通过Spring-social-linkin提供对Linkin的支持
+spring-boot-starter-social-twitter：通过Spring-social-twitter提供对Twitter的支持
+spring-boot-starter-test：对常用的测试框架JUnit、Hamcrest和Mockito的支持，包含Spring-tests模块
+spring-boot-starter-thymeleaf：对thymeleaf引擎的支持，包含于Spring整合的配置
+spring-boot-starter-tomcat：SpringBoot默认的Servlet容器
+spring-boot-starter-jetty：使用Jetty作为Servlet容器
+spring-boot-starter-undertow：使用Undertow作为Servlet容器
+spring-bootstarter-remote-shell：用于通过SSH，使用CRaSH远程shell监控，管理你的应用
+spring-boot-starter-validation：用于使用Hibernate Validator实现Java Bean校验
+spring-boot-starter-web：用于使用Spring MVC构建web应用，包括RESTful。Tomcat是默认的内嵌容器
+spring-boot-starter-web-services：对Spring Web Services的支持
+spring-boot-starter-websocket：对websocket开发的支持

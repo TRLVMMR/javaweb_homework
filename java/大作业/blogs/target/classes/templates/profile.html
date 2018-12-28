@@ -1,0 +1,16 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+    <head>  
+        <title>欢迎!</title>  
+    </head>  
+    <body>
+	<h2><a href="http://localhost:8080/index">主页</a></h2>
+	<#if user??>
+		<p><a href="http://localhost:8080/create">创建博客</a></p>
+		<p><a href="http://localhost:8080/myblog">我的文章</a></p>
+     <#else>
+     	<h2>您还没有登录，请前往登录</h1>
+     </#if>
+    </body>  
+</html>

@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+h1
+{
+	font-size: 80px;
+	font-weight: 800;
+	font-style: normal;
+	color: #600;
+	font-family: Verdana, Geneva, sans-serif;
+	text-decoration: blink;
+	text-align: center;
+}
+body
+{
+	background-repeat: no-repeat;
+
+	background-image: url(wall%E5%9B%BE%E7%89%87/timg%20(1)
+.jpg)
+.jpg);
+	float: left;
+	background-position: center;
+	background-size: 1600 1200;
+	background-image: url(wall%E5%9B%BE%E7%89%87/temp.jpg);
+	
+}
+.pic {
+	height: auto;
+	width: auto;
+	clear: none;
+	float: left;
+	border: medium solid #603;
+	margin-top: -35px;
+	margin-right: 10px;
+	margin-bottom: 50px;
+	margin-left: 55px;
+}

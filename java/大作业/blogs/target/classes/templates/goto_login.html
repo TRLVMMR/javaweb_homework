@@ -1,0 +1,27 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>没有登录</title>
+</head>
+    <script type="text/javascript">
+        onload=function(){
+            setInterval(go, 1000);
+        };
+        var x=3; //利用了全局变量来执行
+        function go(){
+        x--;
+            if(x > 0){
+            document.getElementById("sp").innerHTML="还有" + x + "秒后跳转到登录页面";
+            }else{
+            location.href='http://localhost:8080/login';
+            }
+        }
+    </script>
+<body>
+<h2><a href="http://localhost:8080/index">主页</a></h2>
+    <h1 style="text-align:center">您还没有登录</h1>
+    <h2 id="sp" style="text-align:center"></h2>
+</body>
+</html>

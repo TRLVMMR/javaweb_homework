@@ -1,0 +1,31 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>没有登录</title>
+</head>
+    <script type="text/javascript">
+        onload=function(){
+            setInterval(go, 1000);
+        };
+        var x=3; //利用了全局变量来执行
+        function go(){
+        x--;
+            if(x > 0){
+            document.getElementById("sp").innerHTML="还有" + x + "秒后跳转到登录页面";
+            }else{
+            location.href='http://localhost:8080/login';
+            }
+        }
+    </script>
+<body>
+<h2><a href="http://localhost:8080/index">主页</a></h2>
+	<#if user??>
+    	<h1 style="text-align:center">账号或密码错误</h1>
+    <#else>
+    	<h1 style="text-align:center">用户名不存在</h1>
+   	</#if>
+    <h2 id="sp" style="text-align:center"></h2>
+</body>
+</html>

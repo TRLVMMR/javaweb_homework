@@ -1,0 +1,65 @@
+1、maven配置文件
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.0.3.RELEASE</version>
+  </parent>
+  
+  <dependencies>
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+  </dependencies>
+  <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>1.8</source>
+                  <target>1.8</target>
+                  
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
+
+2、application类
+
+@SpringBootApplication
+@ServletComponentScan
+
+	public static void main(String[] args) {
+		SpringApplication.run(IndexApplication.class,args);
+	}
+
+3、属性和资源文件
+application.properties
+     server.port=8085
+
+banner.txt
+     http://patorjk.com/software/taag/
+
+4、controller类
+@RestController
+public class HelloController {
+	
+	@Autowired
+	HelloWorldService myService;
+	
+	@RequestMapping("/hello")
+	public String First() {
+		return myService.getHelloMessage();
+	}
+}
+
+5、service类
+@Service
+public class HelloWorldService {
+	public String getHelloMessage() {
+		return "Hello world";
+	}
+}
+

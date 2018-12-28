@@ -1,0 +1,26 @@
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+      <link rel="stylesheet" type="text/css" href="login.css"/>
+    <head>  
+        <title>欢迎登录!</title>  
+    </head>  
+    <body>
+     <h2><a href="http://localhost:8080/index">主页</a></h2>
+    <form method='post'>
+          <h2 class="text-center">欢迎登录</h2>
+         <div class="form-group">
+        	用户名
+  		<input type="text" name='username' value="${username}" id ="nickname">
+  		</div>
+  		<div class="form-group">
+  		密码
+  		<input type="password" name='password' value="${password}">
+  		</div>
+
+         <button type="reset" class="btn btn-default pull-left">重置</button>
+         <button type="submit" class="btn btn-primary pull-right">提交</button>
+	</form>      
+        
+    </body>  
+</html>

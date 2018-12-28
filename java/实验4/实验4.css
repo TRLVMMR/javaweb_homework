@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.KolImg{
+	max-width: 100%; 
+	height: auto;
+}
+.area1{
+	margin:10px auto;
+	text-align: center;
+}
+.area2{
+	margin: 10px auto;
+	display:-webkit-flex;
+	display:-moz-flex;
+	display:-ms-flex;
+	display:-o-flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;-o-align-items: center;-webkit-justify-content: center;-moz-justify-content: center;-ms-justify-content: center;-o-justify-content: center;border: 1px solid #ee8923;padding:25px 21px 38px 23px;background-image:url(http://editor-material.oss-cn-beijing.aliyuncs.com/style/20180918/1537238248/%E6%96%B0%E5%A2%9E%E6%A8%A1%E6%9D%BF_2.png);background-position: bottom left;background-repeat:repeat-x;background-size: 311px 35px;
+	}
+.Aimg2{
+	width:270px;
+}
+
+.Aword2{
+	background-image:url(http://editor-material.oss-cn-beijing.aliyuncs.com/style/20180918/1537238248/%E6%96%B0%E5%A2%9E%E6%A8%A1%E6%9D%BF_3.png);background-position: top left;background-repeat: no-repeat;background-size:100% auto;width:55px;height: 55px;text-align: center;padding-top: 14px;padding-right: 3px;box-sizing:border-box;
+}
+
+body > section.area2 > section.Aword2 > p{
+	margin:0;font-size: 18px;color: #ffffff;
+}
+
+{
+	margin: 0;font-size: 15px;line-height: 1.5;color: #333333;text-indent: 2em;
+}

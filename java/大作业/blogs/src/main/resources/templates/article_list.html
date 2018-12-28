@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"  
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">  
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>博客</title>
+</head>
+
+<body>
+<h2><a href="http://localhost:8080/index">主页</a></h2>
+<h1>我的文章： </h1>
+	<#list articles as item>
+		<h2>标题 ${item.getTitle()} </h2><p><a href="http://localhost:8080/blog/${item.getID()}">查看</a>
+		<a href="http://localhost:8080/update/${item.getID()}">编辑</a>
+		<a href="http://localhost:8080/delete/${item.getID()}">删除</a></p>
+		<br>
+	</#list>
+
+</body>
+</html>
