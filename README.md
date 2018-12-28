@@ -2,7 +2,10 @@
 ## 此项目是实现一个非常简单的博客
 
 ### 使用的框架以及工具
-使用spring boot MVC框架, JPA ORM框架， mysql数据库,  freemarker
+	使用spring boot MVC框架, JPA ORM框架， mysql数据库,  freemarker
+	静态文件放在文件夹中templates中
+### 设置
+	设置文件为application.properties
 
 ### 主函数
 #### 声明作为spring boot的一个app，也即主函数
@@ -293,3 +296,36 @@
 			return true;
 		return false;
 	}
+	
+### 视图层
+#### 倒计时跳转
+##### 跳转使用JavaScript代码实，这样id为sp的就具有此js效果，跳转文字，时间跟链接可自行修改
+	   <script type="text/javascript">
+        onload=function(){
+            setInterval(go, 1000);
+        };
+        var x=3; //利用了全局变量来执行
+        function go(){
+        x--;
+            if(x > 0){
+            document.getElementById("sp").innerHTML="还有" + x + "秒后跳转到主页";
+            }else{
+            location.href='http://localhost:8080/index';
+            }
+        }
+    </script>
+
+#### 当用户登录时显示用户名，使用if判断已登录用户user是否为空，freemarker语法是后面加两个问号？？
+	<#if user??>
+		<h1>欢迎登录, ${user.getUserName()}</h1>
+		<p><a href="http://localhost:8080/profile">我的账户</a></p>
+     <#else>
+     	<h2>您还没有登录，请前往登录</h1>
+     </#if>
+#### freemakeer循环语句，或者说遍历列表
+	<#list articles as item>
+		<h2>标题 ${item.getTitle()} </h2><p><a href="http://localhost:8080/blog/${item.getID()}">查看</a>
+		<a href="http://localhost:8080/update/${item.getID()}">编辑</a>
+		<a href="http://localhost:8080/delete/${item.getID()}">删除</a></p>
+		<br>
+	</#list>
